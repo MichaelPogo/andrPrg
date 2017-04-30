@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.nutel.finalproject.activities.MainActivity">
+<TextView
+    android:id="@+id/loginHeader"
+    android:paddingTop="32dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:text="Please Login:"
+    android:textSize="32sp"
+    />
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:id="@+id/NameLayout"
+        >
+        <EditText
+            android:id="@+id/userNameTxt"
+            android:visibility="gone"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_margin="3sp"
+            android:layout_height="wrap_content"
+            android:hint="enter user name"
+            android:textSize="24sp"
+            android:gravity="center"
+            />
+
+        <EditText
+            android:id="@+id/emailTxt"
+            android:inputType="textEmailAddress"
+            android:layout_margin="3sp"
+            android:layout_below="@id/userNameTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="enter your email"
+            android:textSize="24sp"
+            android:gravity="center"
+
+            />
+
+
+        <EditText
+            android:id="@+id/passTxt"
+            android:layout_margin="3sp"
+            android:gravity="center"
+            android:layout_below="@+id/emailTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="enter password"
+            android:inputType="textPassword"
+
+            android:textSize="24sp"
+            />
+
+        <EditText
+            android:layout_margin="3sp"
+            android:visibility="gone"
+            android:id="@+id/repassTxt"
+            android:layout_below="@+id/passTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="re-password"
+            android:inputType="textPassword"
+            android:textSize="24sp"
+            android:gravity="center"
+
+            />
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="30sp"
+        android:text="LOGIN"
+        android:id="@+id/loginBtn"
+        android:onClick="login"
+         />
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="REGISTER"
+        android:onClick="register"
+        android:id="@+id/registerBtn"
+        />
+
+
+
+
+
+</LinearLayout>

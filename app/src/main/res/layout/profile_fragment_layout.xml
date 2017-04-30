@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:paddingTop="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:background="#81DAF5"
+    >
+    <Button
+        android:id="@+id/logoutBtn"
+        android:text="LogOut"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       >
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:id="@+id/profilePic"
+            />
+        <TextView
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/nameOfUser"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/emailOfUser"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/levelOfUser"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/genderOfUser"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/weightOfUser"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/heightOfUser"
+            android:textSize="18sp"
+            />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/proRL"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/adminHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="admin options:\n"
+            android:textSize="16sp"
+            />
+        <TextView
+            android:layout_below="@id/adminHeader"
+            android:id="@+id/adminprogAccept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-approval page:"
+            />
+
+        <Button
+            android:text="edit mode"
+            android:layout_below="@id/adminprogAccept"
+            android:id="@+id/toAprrovalBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_below="@id/toAprrovalBtn"
+            android:id="@+id/newCategoryTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-create new category:"
+            />
+        <Button
+            android:text="new ctg"
+            android:layout_below="@id/newCategoryTv"
+            android:id="@+id/addCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

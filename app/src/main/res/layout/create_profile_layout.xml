@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_marginTop="30dp"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:id="@+id/img"
+        android:layout_gravity="center"
+
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="addPicture"
+        android:text="add picture"
+        android:id="@+id/addPictureBtn" />
+
+    <TextView
+        android:id="@+id/genderTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="gender"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:onClick="maleOrFemale"
+        />
+
+    <EditText
+            android:id="@+id/weightTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="weight"
+            android:textSize="18sp"
+            android:inputType="numberDecimal"
+            android:gravity="center"
+            />
+
+    <EditText
+            android:id="@+id/heightTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="height"
+            android:textSize="18sp"
+            android:inputType="numberDecimal"
+            android:gravity="center"
+            />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="save profile"
+        android:layout_gravity="center"
+        android:onClick="finishEditProfile"/>
+
+</LinearLayout>

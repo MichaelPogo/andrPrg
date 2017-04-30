@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">FinalProject</string>
+    <string name="APP_ID">3FF843F2-D3B6-BFBD-FF46-E3C8E2838A00</string>
+    <string name="ANDROID_SECURITY_KEY">677226BC-0760-4518-FFF9-1EC5B4A10900</string>
+    <string name="APP_VERSION">v1</string>
+    <string name="plus">+</string>
+    <string name="info">#When creating new program please be implicit.\n\n#Program might be edited by professional, BAD program will be delete!\n\n#Long press on text will make it editable.\n(for owner program and professional users).
+    </string>
+</resources>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    >
+    <RelativeLayout
+        android:id="@+id/programHeaders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        >
+        <Button
+            android:layout_alignParentRight="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/infoBtn"
+            android:background="@drawable/information"
+            />
+        <Button
+            android:gravity="center"
+            android:layout_alignParentLeft="true"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:textSize="28sp"
+            android:id="@+id/backBtn"
+            android:background="@drawable/back_arrow"
+            />
+        <Button
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/backBtn"
+            android:id="@+id/finishBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="finish"
+            />
+
+        <TextView
+            android:layout_alignParentLeft="true"
+            android:layout_toRightOf="@id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sportTitleTxt"
+            android:textSize="28sp"
+            android:textColor="#40aaff"/>
+        <Button
+            android:id="@+id/edit_btn"
+            android:layout_marginRight="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="16dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/edit_btn"/>
+
+        <TextView
+            android:layout_marginTop="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/edit_btn"
+            android:id="@+id/progWriter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_below="@id/backBtn"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="16dp"
+            android:layout_centerInParent="true"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/titleTxt"
+            android:textSize="30sp"
+            android:textColor="#0000ff"
+            />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@id/programHeaders"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_below="@id/exerciseTtl"
+            android:id="@+id/exercisesLayout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2">
+            <EditText
+                android:hint="exercise name"
+                android:id="@+id/exerciseName"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="60dp" />
+            <EditText
+                android:hint="Description"
+                android:layout_weight="1"
+                android:id="@+id/exerciseDesc"
+                android:layout_width="match_parent"
+                android:layout_height="100dp" />
+
+            <Button
+                android:id="@+id/addExerciseBtn"
+                android:text="\u2193"
+                android:layout_weight="1"
+                android:textSize="24sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/exrList"
+            android:layout_below="@id/exercisesLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+        <ListView
+            android:layout_gravity="left"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/programList"
+            />
+
+
+
+    </LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/approveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ok"
+
+        />
+
+
+</RelativeLayout>
+
