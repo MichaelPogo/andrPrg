@@ -27,9 +27,13 @@ import com.backendless.BackendlessUser;
 import com.backendless.async.callback.AsyncCallback;
 import com.backendless.exceptions.BackendlessFault;
 import com.backendless.persistence.BackendlessDataQuery;
+import com.example.nutel.finalproject.FirebaseDB;
 import com.example.nutel.finalproject.Owner;
 import com.example.nutel.finalproject.R;
 import com.example.nutel.finalproject.adapters.ProgramTitlesAdapter;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -50,11 +54,12 @@ public class WorkoutFrargment extends Fragment {
     static String newProgTtl;
     static boolean checkIfCameFromHere;
     SharedPreferences spinnerPrefs;
-
+    static final String firebaseUrl = "https://sportapp-92fec.firebaseio.com/";
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         root = inflater.inflate(R.layout.workout_fragments_layout,container,false);
+
         this.activity=getActivity();
         categorySpinner=(Spinner)root.findViewById(R.id.category);
         program=new HashMap();
@@ -91,6 +96,9 @@ public class WorkoutFrargment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 program = (Map)programsList.getAdapter().getItem(position);
+              //***************************************
+                FirebaseDB.instance.child(program.get("title")+"").child("counter").setValue(((ProgramTitlesAdapter)programsList.getAdapter()).getCounter()+1);
+               //***************************************
                 FragmentTransaction ft = activity.getFragmentManager().beginTransaction();
                 ft.replace(R.id.fragmentContainer, new ProgramFragment());
                 ft.commit();
